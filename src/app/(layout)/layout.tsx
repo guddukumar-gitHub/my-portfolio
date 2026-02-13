@@ -13,7 +13,6 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -36,7 +35,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                       {pathname
                         .replace("/", "")
                         .replace(/-/g, " ")
-                        .replace(/\b\w/g, (l) => l.toUpperCase()) || "home"}
+                        .replace(/\b\w/g, (l) => l.toUpperCase()) || "Home"}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                 </BreadcrumbList>
