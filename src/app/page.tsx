@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const roles = [
   "Full-Stack Web Developer",
@@ -81,11 +82,12 @@ export default function Home() {
             Hire Me
           </Link>
 
-          <Link
-            href="/projects"
-            className="px-8 py-3 rounded-lg border border-border bg-card text-card-foreground font-medium hover:bg-muted transition"
+           <Link
+            href="/home"
+            className="inline-flex items-center gap-2 px-4 py-3 rounded-lg border border-border bg-card text-card-foreground font-medium hover:bg-muted transition"
           >
-            View Projects
+            View Profile
+            <ArrowRight className="w-4 h-4" />
           </Link>
 
         </div>
