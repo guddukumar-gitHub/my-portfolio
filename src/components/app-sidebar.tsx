@@ -154,8 +154,8 @@ const data = {
   ],
   products: [
     {
-      title: "Blog",
-      url: "/blog",
+      title: "Portfolio",
+      url: "https://portfolio-iota-vert-28.vercel.app/",
       icon: Map,
     },
     {

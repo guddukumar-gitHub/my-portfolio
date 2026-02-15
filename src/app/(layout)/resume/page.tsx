@@ -29,7 +29,7 @@ const ResumePage: React.FC = () => {
       <a
         href="/resume-guddu-kumar.pdf"
         download="Guddu-Kumar-Resume.pdf"
-        className="px-6 py-3 rounded-2xl bg-primary text-white font-medium shadow-md hover:scale-105 transition-transform"
+        className="px-6 py-3 rounded-2xl bg-primary text-primary-foreground font-medium shadow-md hover:scale-105 transition-transform"
       >
         Download Resume
       </a>
