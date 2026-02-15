@@ -1,0 +1,26 @@
+[
+  {
+    "name": "GitHub",
+    "username": "guddukumar-gitHub",
+    "url": "https://github.com/guddukumar-gitHub",
+    "icon": "/socials/github.png"
+  },
+  {
+    "name": "LinkedIn",
+    "username": "guddu-kumar-in",
+    "url": "https://www.linkedin.com/in/guddu-kumar-in/",
+    "icon": "/socials/linkedin.png"
+  },
+  {
+    "name": "Twitter",
+    "username": "your-twitter-handle",
+    "url": "https://twitter.com/your-twitter-handle",
+    "icon": "/socials/twitter.png"
+  },
+  {
+    "name": "Email",
+    "username": "gk4communication@gmail.com",
+    "url": "mailto:gk4communication@gmail.com",
+    "icon": "/socials/email.png"
+  }
+]

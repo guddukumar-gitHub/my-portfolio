@@ -1,0 +1,73 @@
+[
+  {
+    "category": "Frontend",
+    "skills": [
+      {
+        "name": "HTML",
+        "icon": "/tech/html.png"
+      },
+      {
+        "name": "CSS",
+        "icon": "/tech/css.png"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "/tech/javascript.png"
+      },
+      {
+        "name": "React",
+        "icon": "/tech/react.png"
+      },
+      {
+        "name": "Next.js",
+        "icon": "/tech/nextjs.png"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "/tech/tailwind.png"
+      }
+    ]
+  },
+  {
+    "category": "Backend",
+    "skills": [
+      {
+        "name": "Node.js",
+        "icon": "/tech/nodejs.png"
+      },
+      {
+        "name": "Express.js",
+        "icon": "/tech/express.png"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/tech/mongodb.png"
+      },
+      {
+        "name": "MySQL",
+        "icon": "/tech/mysql.png"
+      }
+    ]
+  },
+  {
+    "category": "Tools & Deployment",
+    "skills": [
+      {
+        "name": "Git",
+        "icon": "/tech/git.png"
+      },
+      {
+        "name": "GitHub",
+        "icon": "/tech/github.png"
+      },
+      {
+        "name": "Vercel",
+        "icon": "/tech/vercel.png"
+      },
+      {
+        "name": "VS Code",
+        "icon": "/tech/vscode.png"
+      }
+    ]
+  }
+]

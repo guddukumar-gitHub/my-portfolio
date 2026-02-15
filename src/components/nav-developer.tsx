@@ -29,22 +29,11 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import * as data from "@/lib/data"
 
 export function NavDeveloper({
   developer, socialMediaHandles
-}: {
-  developer: {
-    name: string
-    email: string
-    avatar: string
-    logo: string
-  },
-  socialMediaHandles: {
-    title: string
-    url: string
-    icon?: string
-  }[]
-}) {
+}: { developer: typeof data.developer, socialMediaHandles: typeof data.socials }) {
   const { isMobile } = useSidebar()
 
   return (
@@ -91,8 +80,8 @@ export function NavDeveloper({
               
               {socialMediaHandles.map((handle) => (
                 <DropdownMenuItem key={handle.url} onSelect={() => window.open(handle.url, "_blank")}>
-                 {handle.icon && <img src={handle.icon} alt={handle.title} className="size-4 mr-2" />}
-                  <span>{handle.title}</span>
+                 {handle.icon && <img src={handle.icon} alt={handle.name} className="size-4 mr-2" />}
+                  <span>{handle.username}</span>
                 </DropdownMenuItem>
               ))}
             </DropdownMenuGroup>

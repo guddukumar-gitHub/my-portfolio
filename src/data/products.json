@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "ghostwire",
+    "name": "GhostWire",
+    "description": "Real-time chat app with authentication and private messaging.",
+    "liveURL": "https://ghost-wire.vercel.app/",
+    "githubURL": "https://github.com/guddukumar-github/ghostwire",
+    "logo": "/products/logo.png",
+    "technologies": [
+      { "name": "React", "logo": "/products/react.png" },
+      { "name": "Socket.io", "logo": "/products/socketio.png" },
+      { "name": "Node.js", "logo": "/products/nodejs.png" }
+    ],
+    "highlight": true
+  },
+  {
+    "slug": "portfolio",
+    "name": "Portfolio",
+    "description": "Modern portfolio built with Next.js and Tailwind CSS.",
+    "liveURL": "https://portfolio-iota-vert-28.vercel.app/",
+    "githubURL": "https://github.com/guddukumar-gitHub/my-portfolio",
+    "logo": "/products/logo.png",
+    "technologies": [
+      { "name": "Next.js", "logo": "/products/nextjs.png" },
+      { "name": "Tailwind CSS", "logo": "/products/tailwindcss.png" }
+    ],
+    "highlight": true
+  }
+]

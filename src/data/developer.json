@@ -1,0 +1,14 @@
+{
+  "name": "Guddu Kumar",
+  "title": "Full-Stack Developer",
+  "email": "gk4communication@gmail.com",
+  "phone": "+91-XXXXXXXXXX",
+  "location": "India",
+  "avatar": "/avatar.png",
+  "logo": "/logo.png",
+  "bio": "I am a passionate Full-Stack Developer specializing in building modern, scalable, and performance-driven web applications using Next.js, React, Node.js, and MongoDB. I focus on clean UI, optimized performance, and maintainable architecture.",
+  "resume": "/resume.pdf",
+  "availability": "Open to Work",
+  "experienceYears": 0,
+  "freelanceAvailable": true
+}
