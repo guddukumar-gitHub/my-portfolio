@@ -5,7 +5,7 @@ import ContactForm from "@/components/contact-form";
 export default function Contact() {
 
   return (
-    <section id="contact">
+    <section id="contact" className="flex items-center justify-center p-6 text-justify">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">

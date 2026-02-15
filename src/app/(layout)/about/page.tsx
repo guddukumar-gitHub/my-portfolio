@@ -1,11 +1,12 @@
 export default function AboutPage() {
   return (
-    <section>
-      <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+    <section className="flex items-center justify-center p-6 text-justify">
+     <div>
+       <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
         About Me
       </h1>
 
-      <div className="space-y-5 text-muted-foreground leading-relaxed">
+      <div className="space-y-5 text-muted-foreground leading-relaxed lg:text-lg lg:leading-loose lg:max-w-3xl mx-auto">
         <p>
           Hi, I’m <span className="font-semibold text-foreground">Guddu Kumar</span>, 
           a passionate full-stack developer focused on building clean, scalable, 
@@ -32,6 +33,7 @@ export default function AboutPage() {
           When I’m not coding, I like exploring new tech and improving my development workflow.
         </p>
       </div>
+     </div>
     </section>
   );
 }

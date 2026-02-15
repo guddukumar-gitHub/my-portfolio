@@ -30,15 +30,20 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-export function NavUser({
-  developer,
+export function NavDeveloper({
+  developer, socialMediaHandles
 }: {
   developer: {
     name: string
     email: string
     avatar: string
     logo: string
-  }
+  },
+  socialMediaHandles: {
+    title: string
+    url: string
+    icon?: string
+  }[]
 }) {
   const { isMobile } = useSidebar()
 
@@ -72,7 +77,7 @@ export function NavUser({
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
                   <AvatarImage src={developer.avatar} alt={developer.name} />
-                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  <AvatarFallback className="rounded-lg">GK</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{developer.name}</span>
@@ -80,33 +85,17 @@ export function NavUser({
                 </div>
               </div>
             </DropdownMenuLabel>
+            
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <Sparkles />
-                Upgrade to Pro
-              </DropdownMenuItem>
+              
+              {socialMediaHandles.map((handle) => (
+                <DropdownMenuItem key={handle.url} onSelect={() => window.open(handle.url, "_blank")}>
+                 {handle.icon && <img src={handle.icon} alt={handle.title} className="size-4 mr-2" />}
+                  <span>{handle.title}</span>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <BadgeCheck />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCard />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Bell />
-                Notifications
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <LogOut />
-              Log out
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

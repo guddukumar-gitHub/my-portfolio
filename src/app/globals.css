@@ -123,3 +123,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Gradient animation for backgrounds */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    oklch(0.7 0.2 260),
+    oklch(0.75 0.18 300),
+    oklch(0.8 0.16 340),
+    oklch(0.7 0.2 260)
+  );
+  background-size: 200% 200%;
+  animation: gradient-move 6s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

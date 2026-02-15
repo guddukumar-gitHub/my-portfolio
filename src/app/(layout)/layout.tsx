@@ -43,6 +43,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </header>
           <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min">{children}</div>
+          <div className="text-center text-sm text-muted-foreground py-4">
+            <p>© {new Date().getFullYear()} Guddu Kumar. All rights reserved.</p>
+          </div>
         </SidebarInset>
       </SidebarProvider>
   );

@@ -10,12 +10,11 @@ import {
   PieChart,
   LifeBuoy,
   UserRoundPen,
-  SquareTerminal
+  SquareTerminal,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
-import { NavUser } from "@/components/nav-developer";
+import { NavDeveloper } from "@/components/nav-developer";
 import {
   Sidebar,
   SidebarContent,
@@ -28,6 +27,8 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { NavActions } from "./nav-actions";
+import { NavProducts } from "./nav-product";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 // This is sample data.
 const data = {
@@ -56,6 +57,12 @@ const data = {
       icon: SquareTerminal,
       isActive: false,
     },
+    {
+      title: "Projects",
+      url: "/projects",
+      icon: Frame,
+      isActive: false,
+    }
   ],
   projects: [
     {
@@ -144,7 +151,35 @@ const data = {
       url: "/resume",
       icon: FileDown,
     },
-  ]
+  ],
+  products: [
+    {
+      title: "Blog",
+      url: "/blog",
+      icon: Map,
+    },
+    {
+      title: "GhostWire",
+      url: "https://ghost-wire.vercel.app/",
+      icon: Frame,
+    },
+    {title: "Dashboard App",
+      url: "https://nextjs-dashboard-sigma-five-e2k4qc6izv.vercel.app/",
+      icon: PieChart,
+    },
+  ],
+  socialMediaHandles: [
+    {
+      title: "GitHub",
+      url: "https://github.com/guddukumar-gitHub",
+      icon: "/github.png",
+    },
+    {
+      title: "LinkedIn",
+      url: "https://www.linkedin.com/in/guddu-kumar-in/",
+      icon: "/linkedin.png",
+    },
+  ],
 };
 
 
@@ -157,9 +192,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link className="text-2xl font-bold" href="/">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <img src={data.developer.logo} alt="Logo" />
-                </div>
+                <Avatar className="h-8 w-8 rounded-lg">
+                <AvatarImage src={data.developer.avatar} alt={data.developer.name} />
+                <AvatarFallback className="rounded-lg">GK</AvatarFallback>
+              </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">Guddu Kumar</span>
                   <span className="truncate text-xs">Software Developer</span>
@@ -171,11 +207,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
         <NavActions items={data.actions} />
+        <NavProducts items={data.products} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser developer={data.developer} />
+        <NavDeveloper developer={data.developer} socialMediaHandles={data.socialMediaHandles} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
